@@ -1,0 +1,11 @@
+﻿https://www.youtube.com/watch?v=5eS8Vy4Yxc8
+
+https://medium.com/@KumarHalder/token-based-authentication-in-asp-net-core-43e99aee0593
+
+
+Install Nuget packahe for tokenization
+	Microsoft.AspNetCore.Authentication.JwtBearer
+	https://www.youtube.com/watch?v=q7mTB2EWOHA
+
+Dot Net framework Installer
+	https://dotnet.microsoft.com/en-us/download/dotnet

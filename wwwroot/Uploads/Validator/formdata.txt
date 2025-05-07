@@ -1,0 +1,148 @@
+{/*     <div className="row mb-6 ">
+                <QueryBuilderComponent
+                  width='100%'
+                  columns={fields}
+                  ruleChange={q => setQuery(qryBldrObj.getSqlFromRules(qryBldrObj.getRules()))}
+                  ref={(scope) => { qryBldrObj = scope; }}
+                  allowValidation={true}                                    
+                />
+                <div className='querydata'>
+                  <button onClick={validateFields}> Validate </button>
+                  <h4>
+                    SQL Query:
+                  </h4>
+                  <p style={{ width: "100%", justifyContent: "center", alignItems: 'center', }}>
+                    {query}
+                  </p>                                    
+                </div>           
+            </div>            
+      </div>
+
+      
+      <DialogComponent 
+        width='1000px'        
+        showCloseIcon={true}
+        visible={showaddalert}
+        close={handleClose}
+        position="Center Center"
+        isModal={true}       
+        animationSettings={dlgsettings} 
+        minHeight="700px"
+        buttons={dlgbuttons}      
+        zindex="1000" >
+        <Modal.Header closeButton>
+          <Modal.Title>{id > 0 ? "Update Rule" : "Add Rule"}</Modal.Title>
+        </Modal.Header>
+<Modal.Body> 
+          <div className="container">
+            <Form className="padding:2px" onSubmit={(e) => { e.preventDefault(); handleFormSubmit() }}>
+              <Row className="mb-6">
+                <Form.Control id="id" type="text" placeholder="id" value={id} required />
+                <Form.Group as={Col}>
+                  <Form.Label>Client</Form.Label>
+                  <Form.Control
+                    id="dbname"
+                    type="text"
+                    placeholder="Client"
+                    value={dbname}
+                    onChange={(e) => onChange(e)}
+                    required
+                  />
+                  <Form.Control.Feedback type="invalid">
+                    Please enter CLient.
+                  </Form.Control.Feedback>
+                </Form.Group>
+                <Form.Group as={Col}>
+                  <Form.Label>Type</Form.Label>
+                  <Form.Control
+                    id="type"
+                    type="text"
+                    placeholder="Type"
+                    onChange={(e) => onChange(e)}
+                    value={type}
+                    required
+                  />
+                </Form.Group>
+              </Row>
+
+              <Row className="mb-6">
+                <Form.Group as={Col}>
+                  <Form.Label>Error</Form.Label>
+                  <Form.Control
+                    id="errorNo"
+                    type="text"
+                    placeholder="Error"
+                    value={errorNo}
+                    required
+                    onChange={(e) => onChange(e)}
+                  />
+                </Form.Group>
+
+                <Form.Group as={Col}>
+                  <Form.Label>Auto Action</Form.Label>
+                  <Form.Control
+                    id="autoAction"
+                    type="text"
+                    placeholder="Auto Action"
+                    value={autoAction}
+                    onChange={(e) => onChange(e)}
+                  />
+                </Form.Group>
+              </Row>
+
+              <Form.Group className="mb-6">
+                <Form.Label>Description</Form.Label>
+                <Form.Control
+                  id="description"
+                  type="text"
+                  placeholder="Description"
+                  value={description}
+                  onChange={(e) => onChange(e)}
+                  required
+                />
+              </Form.Group>
+
+              <Form.Group className="mb-6 ">
+                <QueryBuilderComponent
+                  width='100%'
+                  columns={fields}
+                  ruleChange={q => setQuery(qryBldrObj.getSqlFromRules(qryBldrObj.getRules()))}
+                  ref={(scope) => { qryBldrObj = scope; }}
+                  allowValidation={true}                                    
+                />
+                <div className='querydata'>
+                  <button onClick={validateFields}> Validate </button>
+                  <h4>
+                    SQL Query:
+                  </h4>
+                  <p style={{ width: "100%", justifyContent: "center", alignItems: 'center', }}>
+                    {query}
+                  </p>                                    
+                </div>
+              </Form.Group>
+
+
+              <Form.Group className="mb-6">
+                <Form.Label>SQL Query</Form.Label>
+                <Form.Control
+                  id="sqlQuery"
+                  type="text"
+                  placeholder="SQL Query"
+                  value={sqlQuery}
+                  onChange={(e) => onChange(e)}
+                  required
+                />
+              </Form.Group>
+              <div className="pt-3 text-end">
+                <Button variant="secondary" onClick={handleClose} >
+                  Close
+                </Button>
+                &nbsp;
+                <Button type="submit" variant="success" >
+                  Save
+                </Button>
+              </div>
+            </Form>
+          </div>             
+          {/*</Modal.Body>
+      </Modal>  */}
